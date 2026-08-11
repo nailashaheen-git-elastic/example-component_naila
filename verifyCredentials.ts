@@ -1,14 +1,13 @@
 import Client from './src/client';
 
-export = async function verifyCredentials(cfg: any) {
+export = async function verifyCredentials(this: any, cfg: any) {
   const client = new Client(this, cfg);
   try {
-    await client.apiRequest({ method: 'GET', url: '/users/me' });
+    await client.apiRequest({ method: 'GET', url: '/user/me' });
     this.logger.info('Verification completed successfully');
     return { verified: true };
   } catch (e) {
     this.logger.error('Verification failed');
-    this.logger.error(JSON.stringify(e.response.data));
-    throw new Error(e.response.data.message);
+    throw new Error('Invalid API key or URL');
   }
 }

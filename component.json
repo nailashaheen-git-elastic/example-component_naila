@@ -1,6 +1,6 @@
 {
-  "title": "example component",
-  "description": "An example component with implementations of OIH actions.",
+  "title": "PetStoreAPI",
+  "description": "PetStoreAPI Integration Component",
   "version": "2.0.1",
   "credentials": {
     "fields": {
@@ -8,18 +8,13 @@
         "viewClass": "TextFieldView",
         "label": "API Base URI",
         "required": true,
-        "placeholder": "http://localhost:3000"
+        "placeholder": "https://petstore.elastic.io/v2"
       },
-      "username": {
-        "viewClass": "TextFieldView",
-        "label": "Username",
-        "required": true,
-        "placeholder": "myUsername"
-      },
-      "password": {
-        "viewClass": "PasswordFieldView",
-        "label": "Password",
-        "required": true
+      "apiKey": {
+      "viewClass": "TextFieldView",
+      "label": "API Key",
+      "required": true,
+      "note": "Use <b>secret</b> for the demo server."
       }
     }
   },
