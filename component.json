@@ -154,10 +154,21 @@
           "required": true,
           "order": 10,
           "model": {
-            "products": "Products",
-            "users": "Users"
-          }
+          "pet": "Pets"
+           }
         },
+        "petStatus": {
+  "label": "Pet Status",
+  "viewClass": "SelectView",
+  "required": true,
+  "order": 9,
+  "prompt": "Select pet status",
+  "model": {
+    "available": "Available",
+    "pending": "Pending",
+    "sold": "Sold"
+  }
+},
         "emitBehavior": {
           "order": 8,
           "viewClass": "SelectView",
@@ -235,29 +246,26 @@
   "triggers": {
     "getNewAndUpdatedObjectsPolling": {
       "main": "./src/triggers/getNewAndUpdatedObjectsPolling.js",
-      "title": "Get New and Updated Objects Polling",
+      "title": "Get Pets By Status",
       "type": "polling",
       "help": {
         "description": "Poll for new and/or updated objects",
         "link": "/example-component/#get-new-and-updated-objects-polling"
       },
       "fields": {
-        "objectType": {
-          "label": "Object Type",
-          "viewClass": "SelectView",
-          "prompt": "Please select the type of object to poll on",
-          "required": true,
-          "order": 10,
-          "model": {
-            "product": "Products",
-            "product-model": "Product models",
-            "locale": "Locales",
-            "attribute": "Attributes",
-            "attribute-group": "Attribute groups",
-            "family": "Families",
-            "category": "Categories"
-          }
-        },
+  "petStatus": {
+    "label": "Pet Status",
+    "viewClass": "SelectView",
+    "required": true,
+    "order": 10,
+    "prompt": "Select pet status",
+    "model": {
+      "available": "Available",
+      "pending": "Pending",
+      "sold": "Sold"
+    }
+  }
+},
         "pollConfig": {
           "label": "Time stamp field to poll on",
           "viewClass": "SelectView",
