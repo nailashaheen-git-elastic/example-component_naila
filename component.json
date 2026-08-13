@@ -97,8 +97,8 @@
           "label": "Object type",
           "prompt": "Select an Object Type",
           "model": {
-            "users": "Users"
-          }
+          "pet": "Pets"
+        }
         }
       },
       "dynamicMetadata": true

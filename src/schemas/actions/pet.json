@@ -1,0 +1,27 @@
+{
+    "in": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "required": true
+      },
+      "status": {
+        "type": "string",
+        "title": "Status"
+      }
+    },
+    "out": {
+      "id": {
+        "type": "integer",
+        "title": "ID"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "status": {
+        "type": "string",
+        "title": "Status"
+      }
+    }
+  }
