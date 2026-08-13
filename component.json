@@ -196,8 +196,8 @@
           "required": true,
           "order": 10,
           "model": {
-            "products": "Products",
-            "users": "Users"
+            "pet": "Pets",
+            "order": "Orders"
           }
         }
       },

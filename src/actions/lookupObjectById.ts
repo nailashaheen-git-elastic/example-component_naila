@@ -10,7 +10,17 @@ export async function processAction(msg: any, cfg: any) {
     throw new Error('No "ID Value" provided!');
   }
 
-  const url = `/${objectType}/${idValue}`;
+  let url: string;
+  switch (objectType) {
+    case 'pet':
+      url = `/pet/${idValue}`;
+      break;
+    case 'order':
+      url = `/store/order/${idValue}`;
+      break;
+    default:
+      throw new Error(`Object type "${objectType}" is not supported!`);
+  }
   const { data } = await client.apiRequest({
     method: 'GET',
     url,
